@@ -1,2 +1,2 @@
-yusuf,12345,yusufgmail.com
-yusuf.usman1003@gmail.com,yusuf.usman1003@gmail.com,12345
+yusuf.usman1003@gmail.com,password,Duplicate Student
+yusuf.usman1003@yahoo.com,12345,yusuf

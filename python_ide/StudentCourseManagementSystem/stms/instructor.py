@@ -25,13 +25,13 @@ class Instructor(User):
                 for exists in file:
                     student_email, enrolled_course = exists.strip().split(',')
                     if enrolled_course == course_code:
-                        with open('../data/students.txt', 'r') as sf:
-                            for student_exists in sf:
+                        with open('../data/students.txt', 'r') as studentfile:
+                            for student_exists in studentfile:
                                 email, _, name = student_exists.strip().split(',')
                                 if email == student_email:
                                     students.append((email, name))
         except FileNotFoundError:
-            pass
+            print("record not found")
         return students
 
 
@@ -45,5 +45,5 @@ class Instructor(User):
                             grade_file.write(f"{student_email},{course_code},{grade}\n")
                         return True
         except FileNotFoundError:
-            pass
+            print("record not found")
         return False
